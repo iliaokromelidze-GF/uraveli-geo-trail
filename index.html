@@ -8,6 +8,13 @@
       name="description"
       content="საგანმანათლებლო გეოლოგიური მარშრუტი კავკასიაში ტურისტებისთვის, მოსწავლეებისთვის და ბუნებით დაინტერესებული ადამიანებისთვის."
     >
+    <meta name="theme-color" content="#24543c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Uraveli Geo Trail">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -31,8 +38,8 @@
           <p class="eyebrow">საგანმანათლებლო მარშრუტი</p>
           <h1 id="hero-title">კავკასიაში პირველი გეოლოგიური ტურისტული მარშრუტი</h1>
           <p>
-            აქ ჩაწერე 3-4 წინადადება: სად მდებარეობს მარშრუტი, რით არის უნიკალური
-            და რატომ არის საინტერესო ტურისტებისთვის, მოსწავლეებისთვის და ბუნების მოყვარულებისთვის.
+            ურავლის ხეობის გეოთრეილი არის პირველი ინფრასტრუქტურულად მოწყობილი
+            ტურისტული მარშრუტი საქართველოსა და კავკასიაში.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#map">ნახე რუკა</a>
@@ -246,5 +253,12 @@
     <footer class="footer">
       <p>გეოლოგიური მარშრუტი | ჩასაშენებელი გვერდი ecotourism.ge-სთვის</p>
     </footer>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("service-worker.js");
+        });
+      }
+    </script>
   </body>
 </html>
